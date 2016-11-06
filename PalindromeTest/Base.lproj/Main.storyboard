@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PalindromeTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Srh-Dh-gfY">
+                                <rect key="frame" x="0.0" y="44" width="375" height="240"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o3W-Yt-2pN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palindrome Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-Mn-7fW">
+                                                <rect key="frame" x="126" y="0.0" width="123" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="uaW-9t-HE0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input string to test" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2q4-eX-FPj">
+                                                <rect key="frame" x="117.5" y="71.5" width="140.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW0-YG-c9d">
+                                                <rect key="frame" x="144" y="128.5" width="87" height="30"/>
+                                                <state key="normal" title="Check string"/>
+                                                <connections>
+                                                    <action selector="onCheckButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fix-Um-1p1"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Q-Hf-i8J">
+                                                <rect key="frame" x="163.5" y="160" width="48" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="8QV-SJ-06N"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.68888300660000001" green="0.71366006140000005" blue="0.73448425530000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="o3W-Yt-2pN" secondAttribute="bottom" id="5dr-f7-0sH"/>
+                                    <constraint firstAttribute="trailing" secondItem="o3W-Yt-2pN" secondAttribute="trailing" id="FPp-Nw-vkK"/>
+                                    <constraint firstItem="o3W-Yt-2pN" firstAttribute="top" secondItem="Srh-Dh-gfY" secondAttribute="top" id="IZJ-kN-iKx"/>
+                                    <constraint firstItem="o3W-Yt-2pN" firstAttribute="leading" secondItem="Srh-Dh-gfY" secondAttribute="leading" id="K0d-6K-Mif"/>
+                                    <constraint firstAttribute="height" constant="240" id="LMg-ci-Ikx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Srh-Dh-gfY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="SRc-Jg-QMy"/>
+                            <constraint firstItem="Srh-Dh-gfY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X0c-2x-7LQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Srh-Dh-gfY" secondAttribute="trailing" id="inv-jh-7lR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="Z8Q-Hf-i8J" id="rzP-CE-KpZ"/>
+                        <outlet property="textField" destination="2q4-eX-FPj" id="5eJ-1J-ONG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
